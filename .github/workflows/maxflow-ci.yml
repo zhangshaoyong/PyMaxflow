@@ -4,6 +4,11 @@ on:
   push:
     branches: [master]
   pull_request:
+  
+# Added: Restrict minimum necessary permissions for GITHUB_TOKEN
+permissions:
+  contents: read  # Only allow reading repository content
+  actions: read   # Only allow reading workflow information
 
 jobs:
   test:
